@@ -26,7 +26,6 @@ public class CommunitiesFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         communnitiesRef = FirebaseDatabase.getInstance().getReference().child("communities");
-        JSONObject communities =
         communitiesViewModel =
                 ViewModelProviders.of(this).get(CommunitiesViewModel.class);
         View root = inflater.inflate(R.layout.fragment_communities, container, false);
