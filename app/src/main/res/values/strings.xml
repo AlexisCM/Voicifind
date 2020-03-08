@@ -18,4 +18,10 @@
     <string name="users_key">users</string>
     <string name="user_nickname">nickname</string>
     <string name="user_registeredCommunities">registeredCommunities</string>
+    <string name="select_community">Select a community to post to:</string>
+
+    <string-array name="community_array">
+        <item>BCIT</item>
+        <item>Renfrew Community Center</item>
+    </string-array>
 </resources>
