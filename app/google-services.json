@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "965359660128",
+    "firebase_url": "https://voicifind.firebaseio.com",
+    "project_id": "voicifind",
+    "storage_bucket": "voicifind.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965359660128:android:b166af4cfe0636c02a6705",
+        "android_client_info": {
+          "package_name": "ca.bcit.cmdf2020"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965359660128-6q96ekvp0p2vk422558ig2pi84aeap5l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ca.bcit.cmdf2020",
+            "certificate_hash": "165e988680088e140050b27f38a687dc7511b5b3"
+          }
+        },
+        {
+          "client_id": "965359660128-mlpqu6qvv0nrh5nva5dg0r14kh9v9gn1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmufSpLeoNo8k-Fumss6wbqLjehaF3d00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965359660128-mlpqu6qvv0nrh5nva5dg0r14kh9v9gn1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
