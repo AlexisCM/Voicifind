@@ -5,4 +5,17 @@
     <string name="title_home">Home</string>
     <string name="title_post">Post</string>
     <string name="title_messages">Messages</string>
+
+    <string name="communities_key">communities</string>
+    <string name="community_name_key">communitiesName</string>
+
+    <string name="messages_key">messages</string>
+    <string name="message_community_key">community</string>
+    <string name="message_listOfMessage_key">listOfMessage</string>
+    <string name="message_String_key">messageString</string>
+    <string name="messaeg_time_key">time</string>
+
+    <string name="users_key">users</string>
+    <string name="user_nickname">nickname</string>
+    <string name="user_registeredCommunities">registeredCommunities</string>
 </resources>
