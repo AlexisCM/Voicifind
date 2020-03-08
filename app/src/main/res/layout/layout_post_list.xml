@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="5dp">
 
     <TextView
         android:id="@+id/textView_community"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:ems="10"/>
+        android:ems="10"
+        android:fontFamily="@font/poppins_medium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     <TextView
         android:id="@+id/textView_msgStr"
@@ -24,6 +26,6 @@
         android:layout_width="match_parent"
         android:layout_below="@id/textView_msgStr"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:gravity="end"
         android:ems="10"/>
 </RelativeLayout>

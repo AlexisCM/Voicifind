@@ -16,12 +16,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/community_array"
+            android:gravity="center"
             android:prompt="@string/select_community" />
 
         <EditText
             android:id="@+id/make_new_post"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="225dp"
             android:layout_marginBottom="10dp"
             android:background="#fde9df"
             android:inputType="textMultiLine"
@@ -36,8 +37,12 @@
 
         <Button
             android:id="@+id/postButton"
+            android:background="@color/colorDarkAccent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_medium"
             android:text="Post"/>
 
     </LinearLayout>
@@ -47,6 +52,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="0dp"
         android:layout_marginStart="0dp"
+        app:itemIconTint="@color/bnv_tab_item_foreground"
+        app:itemTextColor="@color/bnv_tab_item_foreground"
         android:background="?android:attr/windowBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
