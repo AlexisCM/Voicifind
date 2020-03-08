@@ -4,12 +4,12 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Message {
-    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yy HH:mm:ss");
     String messageHashID;
     String community;
     ArrayList<Message> listOfMessage;
@@ -26,7 +26,7 @@ public class Message {
         this. messageString = msg;
         this.listOfMessage = new ArrayList<>();
         this.uuid = "some id thingy";
-        this.time = LocalTime.now().format(dtf);
+        this.time = LocalDateTime.now().format(dtf);
     }
 
     public String getCommunity() {

@@ -38,14 +38,13 @@ public class PostsActivity extends AppCompatActivity {
 
         BottomNavigationView navView = findViewById(R.id.nav_view_posts);
         navView.getMenu().getItem(0).setIcon(R.drawable.ic_home_black_24dp);
-        navView.getMenu().getItem(1).setIcon(R.drawable.ic_dashboard_black_24dp);
-        navView.getMenu().getItem(2).setIcon(R.drawable.ic_edit_black_24dp);
-        navView.getMenu().getItem(3).setIcon(R.drawable.ic_message_black_24dp);
+        navView.getMenu().getItem(1).setIcon(R.drawable.ic_edit_black_24dp);
+        navView.getMenu().getItem(2).setIcon(R.drawable.ic_business_black_24dp);
         int size = navView.getMenu().size();
         for (int i = 0; i < size; i++) {
             navView.getMenu().getItem(i).setChecked(false);
         }
-        navView.getMenu().getItem(2).setChecked(true);
+        navView.getMenu().getItem(1).setChecked(true);
 
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -55,15 +54,11 @@ public class PostsActivity extends AppCompatActivity {
                         startActivity(new Intent(PostsActivity.this, HomepageActivity.class));
                         menuItem.setChecked(true);
                         break;
-                    case R.id.navigation_communities:
-                        startActivity(new Intent(PostsActivity.this, CommunitiesActivity.class));
-                        menuItem.setChecked(true);
-                        break;
                     case R.id.navigation_post:
                         menuItem.setChecked(true);
                         break;
-                    case R.id.navigation_chat:
-                        startActivity(new Intent(PostsActivity.this, ChatActivity.class));
+                    case R.id.navigation_communities:
+                        startActivity(new Intent(PostsActivity.this, CommunitiesActivity.class));
                         menuItem.setChecked(true);
                         break;
                 }

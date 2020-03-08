@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Voicifind</string>
+    <string name="app_name">VOICIFIND</string>
     <string name="title_activity_homepage">HomepageActivity</string>
     <string name="title_communities">Communities</string>
     <string name="title_home">Home</string>
@@ -21,7 +21,7 @@
     <string name="select_community">Select a community to post to:</string>
 
     <string-array name="community_array">
-        <item>BCIT</item>
+        <item>British Columbia Institute of Technology</item>
         <item>Renfrew Community Center</item>
     </string-array>
 </resources>

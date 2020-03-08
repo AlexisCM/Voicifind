@@ -20,6 +20,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class HomepageActivity extends AppCompatActivity {
@@ -50,40 +51,12 @@ public class HomepageActivity extends AppCompatActivity {
                     case R.id.navigation_post:
                         startActivity(new Intent(HomepageActivity.this, PostsActivity.class));
                         break;
-                    case R.id.navigation_chat:
-                        startActivity(new Intent(HomepageActivity.this, ChatActivity.class));
-                        break;
                 }
                 return false;
             }
         });
 
-//        add_post();
     }
-
-//    private void add_post() {
-//        String id = dbRef.push().getKey();
-//        Message msg = new Message(id, "BCIT", "This is hellllllll");
-//
-//        Task setValueTask = dbRef.child(id).setValue(msg);
-//
-//        setValueTask.addOnSuccessListener(new OnSuccessListener() {
-//            @Override
-//            public void onSuccess(Object o) {
-//                Toast.makeText(HomepageActivity.this, "good",
-//                        Toast.LENGTH_LONG).show();
-//            }
-//        });
-//
-//        setValueTask.addOnFailureListener(new OnFailureListener() {
-//            @Override
-//            public void onFailure(@NonNull Exception e) {
-//                Toast.makeText(HomepageActivity.this,
-//                        "OOPS. You done goofed: " + e.toString(),
-//                        Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//    }
 
     @Override
     protected void onStart() {
@@ -98,6 +71,8 @@ public class HomepageActivity extends AppCompatActivity {
                     Message post = postSnapshot.getValue(Message.class);
                     postsList.add(post);
                 }
+
+                Collections.reverse(postsList);
 
                 postsListView.setAdapter(new PostListAdapter(HomepageActivity.this, postsList));
 

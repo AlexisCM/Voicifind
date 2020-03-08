@@ -16,8 +16,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if (savedInstanceState != null) {
+            timer = new Timer();
+            timer.schedule(new OnLoadDelay(), 1500);
+        }
+
         timer = new Timer();
-        timer.schedule(new OnLoadDelay(), 3000);
+        timer.schedule(new OnLoadDelay(), 1500);
 
     }
 
