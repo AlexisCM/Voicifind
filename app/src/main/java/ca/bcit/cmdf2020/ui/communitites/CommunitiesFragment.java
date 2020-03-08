@@ -15,6 +15,8 @@ import androidx.lifecycle.ViewModelProviders;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import org.json.JSONObject;
+
 import ca.bcit.cmdf2020.R;
 
 public class CommunitiesFragment extends Fragment {
@@ -24,6 +26,7 @@ public class CommunitiesFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         communnitiesRef = FirebaseDatabase.getInstance().getReference().child("communities");
+        JSONObject communities =
         communitiesViewModel =
                 ViewModelProviders.of(this).get(CommunitiesViewModel.class);
         View root = inflater.inflate(R.layout.fragment_communities, container, false);
