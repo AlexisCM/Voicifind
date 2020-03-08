@@ -4,22 +4,27 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
+    Timer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btn = findViewById(R.id.button);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, HomepageActivity.class));
-            }
-        });
+        timer = new Timer();
+        timer.schedule(new OnLoadDelay(), 3000);
+
+    }
+
+    class OnLoadDelay extends TimerTask {
+        public void run() {
+            timer.cancel();
+            startActivity(new Intent(MainActivity.this, HomepageActivity.class));
+        }
     }
 }
