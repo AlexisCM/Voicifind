@@ -4,7 +4,7 @@
     <string name="title_communities">Communities</string>
     <string name="title_home">Home</string>
     <string name="title_post">Post</string>
-    <string name="title_messages">Messages</string>
+    <string name="title_chat">Chat</string>
 
     <string name="communities_key">communities</string>
     <string name="community_name_key">communitiesName</string>
