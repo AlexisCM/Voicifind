@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Message {
     String community;
-    ArrayList<String> listOfMessage;
+    ArrayList<Message> listOfMessage;
     // these are for threads
     String messageString;
     String time;
