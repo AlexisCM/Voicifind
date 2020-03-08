@@ -17,6 +17,11 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
+        int size = navView.getMenu().size();
+        for (int i = 0; i < size; i++) {
+            navView.getMenu().getItem(i).setChecked(false);
+        }
+        navView.getMenu().getItem(3).setChecked(true);
 
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
