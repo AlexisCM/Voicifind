@@ -12,7 +12,6 @@
         <activity android:name=".ChatActivity"></activity>
         <activity android:name=".PostsActivity" />
         <activity android:name=".CommunitiesActivity" />
-        <activity android:name=".HomeActivity" />
         <activity
             android:name=".HomepageActivity"
             android:label="@string/title_activity_homepage" />

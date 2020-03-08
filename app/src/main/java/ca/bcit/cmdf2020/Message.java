@@ -9,12 +9,25 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Message {
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
+    String messageHashID;
     String community;
     ArrayList<Message> listOfMessage;
     // these are for threads
     String messageString;
     String time;
     String uuid;
+
+    public Message() {}
+
+    public Message(String msgHashID, String community, String msg) {
+        this.messageHashID = msgHashID;
+        this.community = community;
+        this. messageString = msg;
+        this.listOfMessage = new ArrayList<>();
+        this.uuid = "some id thingy";
+        this.time = LocalTime.now().format(dtf);
+    }
 
     public String getCommunity() {
         return community;
@@ -44,6 +57,14 @@ public class Message {
         this.time = time;
     }
 
+    public String getMessageHashID() {
+        return this.messageHashID;
+    }
+
+    public void setMessageHashID(String value) {
+        this.messageHashID = value;
+    }
+
     public String getUuid() {
         return uuid;
     }
@@ -54,8 +75,6 @@ public class Message {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public String getTime(){
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
-        time = LocalTime.now().toString();
         return time;
     }
 
