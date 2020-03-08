@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Voicifind</string>
+    <string name="title_activity_homepage">HomepageActivity</string>
+    <string name="title_communities">Communities</string>
+    <string name="title_home">Home</string>
+    <string name="title_post">Post</string>
+    <string name="title_messages">Messages</string>
+</resources>
