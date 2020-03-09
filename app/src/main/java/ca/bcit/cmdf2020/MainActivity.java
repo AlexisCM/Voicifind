@@ -16,11 +16,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (savedInstanceState != null) {
-            timer = new Timer();
-            timer.schedule(new OnLoadDelay(), 1500);
-        }
-
         timer = new Timer();
         timer.schedule(new OnLoadDelay(), 1500);
 
@@ -31,5 +26,13 @@ public class MainActivity extends AppCompatActivity {
             timer.cancel();
             startActivity(new Intent(MainActivity.this, HomepageActivity.class));
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        timer = new Timer();
+        timer.schedule(new OnLoadDelay(), 1500);
     }
 }
